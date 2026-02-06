@@ -4,6 +4,88 @@
     <meta charset="UTF-8">
     <title>単純なIncremental</title>
     <script src="https://unpkg.com/break_infinity.js@2.0.0/dist/break_infinity.min.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+/* ダブルタップ拡大だけ防止（ピンチズームは可） */
+html, body {
+    touch-action: manipulation;
+}
+
+/* 全体 */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 10px;
+    background: white;
+    color: black;
+}
+
+/* タイトル */
+h1 {
+    font-size: 8vw;
+    text-align: center;
+    margin: 10px 0;
+}
+
+/* テキスト */
+p {
+    font-size: 6vw;
+    line-height: 1.5;
+}
+
+/* 数字強調 */
+span {
+    font-size: 7vw;
+    font-weight: bold;
+}
+
+/* タブ */
+.tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.tabs button {
+    flex: 1 1 48%;
+    font-size: 6vw;
+    padding: 12px;
+    border-radius: 8px;
+}
+
+/* 通常ボタン */
+button {
+    width: 100%;
+    font-size: 7vw;
+    padding: 16px;
+    margin-top: 8px;
+    border-radius: 10px;
+}
+
+/* 枠（施設やアップグレードの箱） */
+div[id$="area"],
+div[id$="controls"],
+div[id$="display"] {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-top: 10px;
+    padding: 10px;
+    background: #fafafa;
+}
+
+/* PC表示時は大きくなりすぎないよう制限 */
+@media (min-width: 768px) {
+    h1 { font-size: 28px; }
+    p { font-size: 18px; }
+    span { font-size: 20px; }
+    button { font-size: 18px; }
+    .tabs button { font-size: 16px; }
+}
+</style>
 </head>
 <body>
 <h1>単純なIncremental</h1>
@@ -1405,3 +1487,4 @@ document.getElementById('generator8-multiplier').innerText = formatJP(gen8Multip
 
 </body>
 </html>
+
